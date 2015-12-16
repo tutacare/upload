@@ -1,0 +1,22 @@
+{
+    "name": "tuta/upload",
+    "description": "Upload image, resize and get name of image",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Irfan Mahfudz Guntur",
+            "email": "irfanmg@mytuta.com",
+            "homepage": "http://mytuta.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+      "psr-4": {
+        "Tuta\\Upload\\": "src/"
+      }
+    },
+    "minimum-stability": "dev",
+    "require": {
+      "intervention/image": "dev-master"
+    }
+}
