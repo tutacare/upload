@@ -27,19 +27,22 @@ class UploadServiceProvider extends ServiceProvider
     //  $this->app->bind('upload',function($app){
     //    return new Upload($app);
     //  });
-    $this->app['upload'] = $this->app->share(function($app)
-		{
-			return new Upload;
-		});
-      $this->app->booting(function()
-        {
-            $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-            $loader->alias('Upload', 'Tuta\Upload\Facades\UploadFacade');
+    // $this->app['upload'] = $this->app->share(function($app)
+		// {
+		// 	return new Upload;
+		// });
+    //   $this->app->booting(function()
+    //     {
+    //         $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+    //         $loader->alias('Upload', 'Tuta\Upload\Facades\UploadFacade');
+    //     });
+        $this->app->bind('upload', function($app) {
+            return new Upload($app);
         });
     }
 
-    public function provides()
-  	{
-  		return array('upload');
-  	}
+    // public function provides()
+  	// {
+  	// 	return array('upload');
+  	// }
 }

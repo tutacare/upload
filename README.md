@@ -1,5 +1,13 @@
-# Upload
-Upload image, resize and get name of image
+# Tuta Upload
+
+[![Latest Version](https://img.shields.io/github/release/tuta/upload.svg?style=flat-square)](https://github.com/tuta/upload/releases)
+[![Total Downloads](https://img.shields.io/packagist/dt/tuta/upload.svg?style=flat-square)](https://packagist.org/packages/tuta/upload)
+
+#### Feature overview
+
+- Upload File.
+- Upload Image.
+- Read Image
 
 Installation:
 

@@ -1,11 +1,11 @@
 {
     "name": "tuta/upload",
-    "description": "Upload image, resize and get name of image",
+    "description": "Upload file, resize and get name of image",
     "license": "MIT",
     "authors": [
         {
             "name": "Irfan Mahfudz Guntur",
-            "email": "irfanmg@mytuta.com",
+            "twitter": "@tutacare",
             "homepage": "http://mytuta.com",
             "role": "Developer"
         }
@@ -15,8 +15,13 @@
         "Tuta\\Upload\\": "src/"
       }
     },
-    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.1.dev"
+        }
+    }
     "require": {
       "intervention/image": "dev-master"
-    }
+    },
+    "minimum-stability": "dev"
 }
