@@ -21,12 +21,18 @@ class Upload {
   }
   public function file($file, $path)
   {
-    $file_name = uniqid('TUTA_', true) . '_' . str_random(5) . '.' . $file->getClientOriginalExtension();
-    Storage::put($path.'/'.$file_name,  $file);
+    $file_name = uniqid('TUTA', true) . str_random(5) . '.' . $file->getClientOriginalExtension();
+    Storage::put($path.'/'.$file_name, File::get($file));
     return [
         'name' => $file_name,
         'size' => $file->getClientSize(),
         'mime' => $file->getClientMimeType()
     ];
+  }
+  public function readFile($file, $path)
+  {
+    $file_result = Storage::get($path . '/' . $file);
+    $mimetype = Storage::mimeType($path . '/' . $file);
+    return response($file_result, 200)->header('Content-Type', $mimetype);
   }
 }

@@ -5,10 +5,13 @@
 
 #### Feature overview
 
-- Upload File.
 - Upload Image.
-- Read Image
+- Upload File.
+- Read File / Image.
+
 
 Installation:
+
+
 
 Read this: <a href="http://mytuta.com/upload-gambar-dengan-ringkas-menggunakan-tuta-upload-pada-laravel/">Simple Image Upload With Tuta Upload On Laravel</a>
